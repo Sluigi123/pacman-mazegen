@@ -1181,7 +1181,7 @@ var getTiles = function() {
         // erase pellets from bottom of the ghost house proceeding down until
         // reaching a pellet tile that isn't surround by walls
         // on the left and right
-        y = subrows-36;
+        y = subrows-28;
         setTile(i, y, ' ');
         j = 1;
         while (getTile(i,y+j) == '.' &&
@@ -1211,7 +1211,7 @@ var getTiles = function() {
         // reaching a pellet tile that isn't surround by walls
         // on the top and bottom.
         x = 6;
-        y = subrows-14-i;
+        y = subrows-28-i;
         setTile(x, y, ' ');
         j = 1;
         while (getTile(x+j,y) == '.' &&
@@ -1446,7 +1446,7 @@ var drawTiles = function(ctx,left,top,size) {
 
 var mapgen = function() {
     genRandom();
-    var map = new Map(72,36,getTiles());
+    var map = new Map(48,36,getTiles());
     map.name = "";
     map.wallFillColor = randomColor();
     map.wallStrokeColor = rgbString(hslToRgb(Math.random(), Math.random(), Math.random() * 0.4 + 0.6));
