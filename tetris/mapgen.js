@@ -31,7 +31,7 @@ var tallRows = [];
 var narrowCols = [];
 
 var rows = 9;
-var cols = 5;
+var cols = 10;
 
 var reset = function() {
     var i;
