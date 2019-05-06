@@ -1181,7 +1181,7 @@ var getTiles = function() {
         // erase pellets from bottom of the ghost house proceeding down until
         // reaching a pellet tile that isn't surround by walls
         // on the left and right
-        y = subrows-28;
+        y = subrows-22;
         setTile(i, y, ' ');
         j = 1;
         while (getTile(i,y+j) == '.' &&
@@ -1194,7 +1194,7 @@ var getTiles = function() {
         // erase pellets from top of the ghost house proceeding up until
         // reaching a pellet tile that isn't surround by walls
         // on the left and right
-        y = subrows-40;
+        y = subrows-28;
         setTile(i, y, ' ');
         j = 1;
         while (getTile(i,y-j) == '.' &&
@@ -1211,7 +1211,7 @@ var getTiles = function() {
         // reaching a pellet tile that isn't surround by walls
         // on the top and bottom.
         x = 6;
-        y = subrows-28-i;
+        y = subrows-22-i;
         setTile(x, y, ' ');
         j = 1;
         while (getTile(x+j,y) == '.' &&
