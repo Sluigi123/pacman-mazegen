@@ -31,7 +31,7 @@ var tallRows = [];
 var narrowCols = [];
 
 var rows = 9;
-var cols = 10;
+var cols = 5;
 
 var reset = function() {
     var i;
@@ -1181,7 +1181,7 @@ var getTiles = function() {
         // erase pellets from bottom of the ghost house proceeding down until
         // reaching a pellet tile that isn't surround by walls
         // on the left and right
-        y = subrows-22;
+        y = subrows-14;
         setTile(i, y, ' ');
         j = 1;
         while (getTile(i,y+j) == '.' &&
@@ -1194,7 +1194,7 @@ var getTiles = function() {
         // erase pellets from top of the ghost house proceeding up until
         // reaching a pellet tile that isn't surround by walls
         // on the left and right
-        y = subrows-28;
+        y = subrows-20;
         setTile(i, y, ' ');
         j = 1;
         while (getTile(i,y-j) == '.' &&
@@ -1211,7 +1211,7 @@ var getTiles = function() {
         // reaching a pellet tile that isn't surround by walls
         // on the top and bottom.
         x = 6;
-        y = subrows-22-i;
+        y = subrows-14-i;
         setTile(x, y, ' ');
         j = 1;
         while (getTile(x+j,y) == '.' &&
@@ -1446,7 +1446,7 @@ var drawTiles = function(ctx,left,top,size) {
 
 var mapgen = function() {
     genRandom();
-    var map = new Map(56,36,getTiles());
+    var map = new Map(28,36,getTiles());
     map.name = "";
     map.wallFillColor = randomColor();
     map.wallStrokeColor = rgbString(hslToRgb(Math.random(), Math.random(), Math.random() * 0.4 + 0.6));
